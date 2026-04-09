@@ -245,27 +245,34 @@ button {
 
 /* Hamburger */
 .hamburger {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 6px;
+  position: relative;
   width: 44px;
   height: 44px;
   background: none;
   border: none;
-  padding: 6px;
+  cursor: pointer;
+  flex-shrink: 0;
 }
 .hamburger span {
   display: block;
-  width: 100%;
-  height: 1.5px;
+  position: absolute;
+  left: 10px;        /* (44 - 24) / 2 */
+  width: 24px;
+  height: 2px;
   background: var(--color-primary);
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  transform-origin: center;
+  border-radius: 1px;
+  transform-origin: center center;
+  transition: transform 0.35s ease, opacity 0.35s ease;
 }
-.hamburger.is-open span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
+/* 各barの中心: top+1px = 14px / 22px / 30px → 中心間距離 8px */
+.hamburger span:nth-child(1) { top: 13px; }
+.hamburger span:nth-child(2) { top: 21px; }
+.hamburger span:nth-child(3) { top: 29px; }
+
+/* open: bar1を+8px下、bar3を-8px上に移動してボタン中心(22px)で重ね回転 */
+.hamburger.is-open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
 .hamburger.is-open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
-.hamburger.is-open span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
+.hamburger.is-open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
 
 /* ----------------------------------------------------------
    7. SP Navigation
