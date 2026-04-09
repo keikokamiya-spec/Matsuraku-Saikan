@@ -1,0 +1,293 @@
+/* ===== リセット & 基本設定 ===== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Hiragino Mincho ProN', 'Noto Serif JP', serif;
+  color: #333;
+  background-color: #fff;
+  line-height: 1.8;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ===== ヘッダー ===== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #fff;
+  border-bottom: 1px solid #e0d8cc;
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+.logo a {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #222;
+}
+
+.global-nav ul {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
+
+.global-nav a {
+  font-size: 0.9rem;
+  color: #555;
+  letter-spacing: 0.05em;
+  transition: color 0.2s;
+}
+
+.global-nav a:hover {
+  color: #8b6914;
+}
+
+/* ===== ヒーロー ===== */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  min-height: 320px;
+  background: #f7f3ed;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  margin-bottom: 12px;
+  color: #2a1a00;
+}
+
+.hero-subtitle {
+  font-size: 1rem;
+  color: #8b6914;
+  letter-spacing: 0.15em;
+}
+
+/* ===== セクション共通 ===== */
+.section {
+  padding: 80px 0;
+}
+
+.section-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+  letter-spacing: 0.1em;
+  color: #2a1a00;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: #8b6914;
+  margin: 12px auto 0;
+}
+
+/* ===== About ===== */
+.about {
+  background: #fff;
+}
+
+.section-text {
+  max-width: 680px;
+  margin: 0 auto;
+  text-align: center;
+  color: #555;
+  font-size: 1rem;
+}
+
+/* ===== Gallery ===== */
+.gallery {
+  background: #f7f3ed;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.gallery-item img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 2px;
+  transition: opacity 0.2s;
+}
+
+.gallery-item img:hover {
+  opacity: 0.85;
+}
+
+/* ===== Access ===== */
+.access {
+  background: #fff;
+}
+
+.access-info {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.info-list {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 16px 24px;
+}
+
+.info-list dt {
+  font-weight: 700;
+  color: #8b6914;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  padding-top: 2px;
+}
+
+.info-list dd {
+  color: #444;
+}
+
+/* ===== Contact ===== */
+.contact {
+  background: #f7f3ed;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #444;
+  letter-spacing: 0.05em;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #d8ccb8;
+  border-radius: 2px;
+  font-size: 1rem;
+  font-family: inherit;
+  background: #fff;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #8b6914;
+}
+
+.btn-submit {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  background: #2a1a00;
+  color: #fff;
+  font-size: 1rem;
+  font-family: inherit;
+  letter-spacing: 0.1em;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-submit:hover {
+  background: #8b6914;
+}
+
+/* ===== フッター ===== */
+.site-footer {
+  background: #2a1a00;
+  color: #a08050;
+  text-align: center;
+  padding: 24px 0;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+}
+
+/* ===== レスポンシブ ===== */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .global-nav ul {
+    gap: 16px;
+  }
+
+  .info-list {
+    grid-template-columns: 100px 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .site-header .container {
+    flex-direction: column;
+    height: auto;
+    padding: 12px 20px;
+    gap: 8px;
+  }
+
+  .info-list {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+}
