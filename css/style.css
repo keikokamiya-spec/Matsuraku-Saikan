@@ -838,7 +838,7 @@ button {
 
 .access__hours { display: flex; flex-direction: column; gap: 4px; }
 .access__hours-row { display: flex; gap: 12px; }
-.access__hours-row dt { min-width: 56px; font-weight: 500; }
+.access__hours-row dt { min-width: 64px; font-weight: 500; }
 .access__hours-row dd { color: #555; }
 
 /* CTA */
