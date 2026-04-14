@@ -742,6 +742,7 @@ button {
   transition: transform 0.55s ease;
 }
 .gallery__slide:hover img { transform: scale(1.05); }
+.gallery__slide--contain img { object-fit: contain; background: #1a0d10; }
 
 .gallery__placeholder {
   position: absolute;
